@@ -1,0 +1,112 @@
+@import "../../styles/App.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.navbar {
+  height: 100px;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  background: linear-gradient(105deg, #2c3e50, #1c2833, #473053);
+}
+
+.navbar .wrapper {
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering the content */
+  height: 100%;
+  padding: 0 20px;
+}
+
+.navbar .wrapper span {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.navbar .wrapper .social {
+  display: flex;
+  gap: 20px; /* Adjust gap to fit more icons on smaller screens */
+  justify-content: center; /* Centering the social icons */
+  width: auto;
+}
+
+.navbar .wrapper .social a {
+  color: #fff;
+  font-size: 1.5em; /* Adjust font size for smaller screens */
+  transition: color 0.3s;
+}
+
+.navbar .wrapper .social a:hover {
+  color: #ff5722;
+}
+
+@media (min-width: 1024px) {
+  .navbar .wrapper .social a {
+    margin-top: 20px;
+    font-size: 2rem; /* Increase font size for larger screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar .wrapper .social a {
+    margin-top: 20px;
+    font-size: 2em; /* Adjust font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .wrapper {
+    padding: 0 10px;
+  }
+
+  .navbar .wrapper .social {
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .navbar .wrapper .social a {
+    margin-top: 20px;
+    font-size: 2em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .wrapper {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navbar .wrapper span {
+    display: none; /* Hide the span on small screens */
+  }
+
+  .navbar .wrapper .social {
+    gap: 10px; /* Adjust gap for the smallest screens */
+  }
+
+  .navbar .wrapper .social a {
+    margin-top: 20px;
+    font-size: 2em; /* Adjust font size for the smallest screens */
+  }
+
+  .navbar {
+    width: 100%;
+  }
+}
+
+@keyframes socialIconHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.navbar .wrapper .social a:hover {
+  animation: socialIconHover 0.5s;
+}
+

@@ -1,0 +1,174 @@
+@import "../../styles/App.css";
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  /* background: linear-gradient(180deg, #0c0c1d, #111132); */
+  background: linear-gradient(135deg, #2c3e50, #1c2833, #473053, #008080);
+  position: relative;
+}
+
+.hero .wrapper {
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+}
+
+.hero .wrapper .textContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero .wrapper .textContainer .name .letter {
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.hero .wrapper .textContainer h2 {
+  font-size: calc(16px + 1.5vw); /* Responsive font size */
+  color: rebeccapurple;
+  letter-spacing: calc(1px + 1vw); /* Responsive letter spacing */
+}
+
+.hero .wrapper .textContainer h1 {
+  font-size: calc(36px + 4vw); /* Responsive font size */
+}
+
+.hero .wrapper .textContainer .buttons button {
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.hero .wrapper .textContainer img {
+  width: 50px;
+}
+
+.hero .imageContainer {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+
+.hero .imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.hero .slidingTextContainer {
+  position: absolute;
+  font-size: 50vh;
+  bottom: -100px;
+  white-space: nowrap;
+  color: #ffffff09;
+  width: 80%;
+  font-weight: bold;
+}
+
+@media (max-width: 738px) {
+  .hero .wrapper .textContainer {
+    height: 50%;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .wrapper .textContainer h1 {
+    font-size: calc(24px + 3vw); /* Adjusted responsive font size for small screens */
+  }
+
+  .hero .wrapper .textContainer h2 {
+    font-size: calc(12px + 2vw); /* Adjusted responsive font size for small screens */
+  }
+
+  .hero .imageContainer {
+    height: 50%;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .hero .imageContainer img {
+    object-fit: contain; /* Ensure the entire image is visible */
+    object-position: center; /* Centers the image within the container */
+  }
+}
+
+@media (min-width: 739px) and (max-width: 1450px) {
+  .hero .wrapper .textContainer {
+    height: 50%;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero .wrapper .textContainer h1 {
+    font-size: calc(28px + 3vw); /* Adjusted responsive font size for medium screens */
+  }
+
+  .hero .wrapper .textContainer h2 {
+    font-size: calc(14px + 2.5vw); /* Adjusted responsive font size for medium screens */
+  }
+
+  .hero .imageContainer {
+    height: 50%;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .hero .imageContainer img {
+    object-fit: contain; /* Ensure the entire image is visible */
+    object-position: center; /* Centers the image within the container */
+  }
+}
+
+/* Additional media query for larger screens */
+@media (min-width: 1451px) {
+  .hero .wrapper .textContainer {
+    height: 100%;
+    width: 50%;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero .wrapper .textContainer h1 {
+    font-size: calc(36px + 4vw); /* Responsive font size for large screens */
+  }
+
+  .hero .wrapper .textContainer h2 {
+    font-size: calc(16px + 1.5vw); /* Responsive font size for large screens */
+  }
+
+  .hero .imageContainer {
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0;
+  }
+
+  .hero .imageContainer img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+

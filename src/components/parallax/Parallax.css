@@ -1,0 +1,106 @@
+@import "../../styles/App.css";
+
+/* Parallax container */
+.parallax {
+  width: 100%;
+  height: 100vh; /* Ensure full viewport height */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 5px solid white; /* Add a white border around the parallax container */
+  box-sizing: border-box; /* Include border in the element's total width and height */
+  margin-top: 1rem;
+}
+
+/* Parallax text */
+.parallax h1 {
+  font-size: 100px;
+  color: white;
+  z-index: 4; /* Ensure text is above all background layers */
+  text-align: center; /* Center text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 738px) {
+  .parallax h1 {
+    font-size: 72px;
+    text-align: center;
+  }
+
+  .parallax .mountains,
+  .parallax .planets,
+  .parallax .stars {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Background layers */
+.parallax .mountains {
+  background-image: url("/abstract.webp");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+.parallax .planets {
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+/* Parallax gradient overlay */
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 30%);
+  z-index: 1;
+}
+
+/* Parallax bottom overlay */
+.parallax::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 1024px) {
+  .textContainer {
+    margin-top: 20px;
+    font-size: 2rem; /* Increase font size for larger screens */
+  }
+}
+
+/* Adjustments for medium screens */
+@media (max-width: 1024px) {
+  .textContainer {
+    margin-top: 20px;
+    font-size: 2em; /* Adjust font size for medium screens */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .textContainer {
+    padding: 0 10px;
+  }
+}

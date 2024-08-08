@@ -1,0 +1,139 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  /* background: linear-gradient(135deg, #2e2c92, #1e1e4f, #000); */
+  background: linear-gradient(135deg, #2c3e50, #1c2833, #473053, #008080);
+  color: #fff;
+  border-radius: 10px;
+  overflow: visible; 
+  border: 5px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+  margin-top: 5px;
+}
+
+.textContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.textContainer p {
+  animation: scaleText 2s infinite;
+}
+
+@keyframes scaleText {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.companyDetails,
+.skillsDetails {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.companyDetails:hover,
+.skillsDetails:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.knotIcon {
+  font-size: 2rem;
+  color: #fff;
+  transform: rotate(70deg);
+  transition: transform 0.3s;
+}
+
+.knotIcon:hover {
+  transform: rotate(90deg);
+}
+
+p {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+hr {
+  width: 80%;
+  margin: 1rem auto;
+  border: none;
+  border-top: 2px solid #fff;
+}
+
+/* Responsive Design */
+
+/* For devices with max-width: 738px */
+@media (max-width: 738px) {
+  .experience {
+    flex-direction: row;
+    align-items: center;
+    margin-top: -1px;
+  }
+
+  .companyDetails,
+  .skillsDetails {
+    margin: 0.1rem 0;
+  }
+
+  .knotIcon {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
+/* For devices with min-width: 739px and max-width: 1450px */
+@media (min-width: 739px) and (max-width: 1450px) {
+  .companyDetails,
+  .skillsDetails {
+    padding: 0.1rem;
+  }
+
+  .knotIcon {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+}
+
+/* For devices with min-width: 1451px */
+@media (min-width: 1451px) {
+  .companyDetails,
+  .skillsDetails {
+    margin-top: -1px;
+    padding: 0.1rem;
+  }
+
+  .knotIcon {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem; /* Standard font size */
+  }
+}

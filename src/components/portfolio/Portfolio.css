@@ -1,0 +1,238 @@
+@import "../../styles/App.css";
+
+.portfolio {
+  position: relative;
+  background: linear-gradient(135deg, #2c3e50, #1c2833, #473053, #008080);
+}
+
+.portfolio .progress {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  color: orange;
+  font-size: 36px;
+}
+
+@media (max-width: 738px) {
+  .portfolio .progress {
+    padding-top: calc(100vh - 100px);
+    font-size: 24px;
+  }
+
+  .portfolio .container .wrapper {
+    flex-direction: column;
+  }
+
+  .portfolio .container .wrapper .imageContainer {
+    width: 90%;
+    max-height: 300px;
+  }
+
+  .portfolio .container .wrapper .imageContainer img {
+    object-fit: contain;
+    border: 5px solid #fff;
+    border-radius: 10px;
+  }
+
+  .portfolio .container .wrapper .textContainer {
+    transform: none !important;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .portfolio .container .wrapper .textContainer h2 {
+    font-size: 24px;
+  }
+
+  .portfolio .container .wrapper .textContainer p {
+    font-size: 14px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 739px) and (max-width: 1450px) {
+  .portfolio .progress {
+    padding-top: 50px;
+    font-size: 30px;
+  }
+
+  .portfolio .container .wrapper {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .portfolio .container .wrapper .imageContainer {
+    width: 50%;
+    max-height: 500px;
+  }
+
+  .portfolio .container .wrapper .imageContainer img {
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 10px;
+  }
+
+  .portfolio .container .wrapper .textContainer {
+    padding: 20px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .portfolio .container .wrapper .textContainer h2 {
+    font-size: 36px;
+  }
+
+  .portfolio .container .wrapper .textContainer p {
+    font-size: 16px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (min-width: 1451px) {
+  .portfolio .progress {
+    padding-top: 50px;
+    font-size: 36px;
+  }
+
+  .portfolio .container .wrapper {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .portfolio .container .wrapper .imageContainer {
+    width: 50%;
+    max-height: 600px;
+  }
+
+  .portfolio .container .wrapper .imageContainer img {
+    object-fit: cover;
+    border: 5px solid #fff;
+    border-radius: 10px;
+  }
+
+  .portfolio .container .wrapper .textContainer {
+    padding: 30px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .portfolio .container .wrapper .textContainer h2 {
+    font-size: 48px;
+  }
+
+  .portfolio .container .wrapper .textContainer p {
+    font-size: 18px;
+    color: white;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.portfolio .progress .progressBar {
+  height: 10px;
+  background-color: white;
+}
+
+.portfolio .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.portfolio .container .wrapper {
+  max-width: 1366px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.portfolio .container .wrapper .imageContainer {
+  flex: 1;
+  height: 50%;
+}
+
+.portfolio .container .wrapper .imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .container .wrapper .textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.portfolio .container .wrapper .textContainer h2 {
+  font-size: 72px;
+}
+
+.portfolio .container .wrapper .textContainer p {
+  color: gray;
+  font-size: 20px;
+}
+
+.portfolio .container .wrapper .textContainer button {
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.demo-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px rgba(231, 28, 41, 0.5);
+  margin-top: -10px;
+}
+
+.demo-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(49, 211, 49, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(185, 69, 30, 0.4);
+  }
+}
