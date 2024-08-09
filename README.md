@@ -33,8 +33,9 @@ This is my personal portfolio website, designed to showcase my skills, projects,
 📞 Contact
 If you have any questions or feedback, feel free to reach out to me:
 
-Email: subhankardey1122@gmail.com
-LinkedIn: https://www.linkedin.com/in/subhankar-dey25/
+- Email: subhankardey1122@gmail.com
+- LinkedIn: https://www.linkedin.com/in/subhankar-dey25/
+- Website: https://webdevriku.netlify.app
 
 🤝 Contributing
 Contributions are welcome! If you have any ideas, suggestions, or improvements, please open an issue or submit a pull request.
